@@ -2,6 +2,8 @@
 
 document.addEventListener('DOMContentLoaded', event => {
 
+    document.querySelectorAll(`[prevent="true"]`).forEach(element => element.addEventListener('click', event => event.preventDefault()));
+
     var github_repo_link = document.createElement('a');
     github_repo_link.id = "github_link";
     github_repo_link.target = "_blank";
@@ -41,8 +43,10 @@ document.addEventListener('DOMContentLoaded', event => {
     });
 
     form.addEventListener('submit', event => {
+
         if (inputFile.files.length > 0) form.submit();
-        event.preventDefault();
+        else event.preventDefault();
+
     });
 
     const dataBox = document.querySelector('#show-data');

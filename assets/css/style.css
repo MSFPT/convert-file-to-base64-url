@@ -18,6 +18,10 @@ body{
     user-zoom: none;
 }
 
+a, .link {
+    text-decoration: none !important;
+}
+
 #github_link {
     filter: drop-shadow(0 0 6px rgba(200 200 200 / 25%));
     position: fixed;
@@ -44,7 +48,7 @@ input#file, input#file::-webkit-file-upload-button {
     visibility: hidden !important;
 }
 
-label[for="file"] {
+label[for="file"], button[type="submit"] {
     background: transparent ;
     width: 150px;
     height: 50px;
@@ -64,25 +68,9 @@ label[for="file"] {
     cursor: pointer;
 }
 
-button[type="submit"] { /* nojs */
-    background: #101010 ;
-    width: 150px;
-    height: 50px;
-    color: #fff;
-    border-radius: 6px;
-    border: 0;
-    outline: #eee 2px dashed;
-    margin: 25px auto;
-
-    font-weight: 500;
-    font-size: 17px;
-    letter-spacing: .3px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    cursor: pointer;
+button[type="submit"] {
+    background: #101010 !important;
+    margin: 25px auto 0;
 }
 
 #show-data[hide] {
@@ -163,19 +151,18 @@ button[type="submit"] { /* nojs */
     background-color: #05070a;
     color: #00c3f4;
     font-size: 16px;
-    outline: none;
-    border: none;
 
     width: calc(95% - 16px);
     max-width: 820px;
 
     padding: 13px 12px ;
-    margin: 13px ;
-
     border-radius: 7px;
+    margin: 13px;
+
+    outline: none;
+    border: none;
 
     user-select: all !important;
-
     overflow: scroll hidden;
 }
 

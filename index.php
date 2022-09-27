@@ -23,12 +23,15 @@
     if(!empty($_FILES['file'])){
 
         $file_name = $_FILES['file']['name'];
+
         $file_type = $_FILES['file']['type'];
+
+        $file_tmp = $_FILES['file']['tmp_name'];
 
         template_render('template.html', array(
             '{{ is_show }}' => '',
             '{{ file_name }}' => $file_name,
-            '{{ base64_url }}' => "data:$file_type;base64,".base64_encode(file_get_contents($_FILES['file']['tmp_name']))
+            '{{ base64_url }}' => "data:$file_type;base64,".base64_encode(file_get_contents($file_tmp))
         ), 200);
 
     } else {

@@ -41,7 +41,7 @@
       </noscript>
     </form>
     <section id="show-data" {{ is_show }}>
-      <button class="close">&times;</button>
+      <a href="/" prevent="true"><button class="close">&times;</button></a>
         <h3>{{ file_name }}</h3>
         <div type="text" readonly>{{ base64_url }}</div>
     </section>
