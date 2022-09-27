@@ -29,6 +29,12 @@ document.addEventListener('DOMContentLoaded', event => {
             github_repo_link.appendChild(github_mark);
 
         });
+    
+    const style_github_link = document.createElement('style');
+
+    style_github_link.innerHTML = `#github_link { filter: drop-shadow(0 0 4px rgba(120 120 120 / 25%));position: fixed;display: block;top: 20px;right: 20px;z-index: 46; }`;
+    
+    document.head.appendChild(style_github_link);
 
     document.body.appendChild(github_repo_link);
 
