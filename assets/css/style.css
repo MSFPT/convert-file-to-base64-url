@@ -127,16 +127,17 @@ button[type="submit"] {
 }
 
 #show-data > h3 {
-
-    display: block;
-
-    overflow: hidden;
-    text-overflow: ellipsis;
-
+    display: block !important;
+    max-width: 100%;
+    height: min-content;
     font-size: 32px;
     color: #eee;
-
     margin: 25px 13px 36px;
+    word-wrap: normal;
+    overflow-wrap: normal;
+    overflow-block: hidden;
+    overflow: scroll hidden;
+    text-overflow: ellipsis;
 }
 
 #show-data > div {
