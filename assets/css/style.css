@@ -87,7 +87,7 @@ button[type="submit"] {
     z-index: 7;
 }
 
-#show-data .close {
+#show-data #close {
     background-color: rgba(26 26 26 / 18%);
 
     width: 38px;
@@ -115,11 +115,12 @@ button[type="submit"] {
     top: 15px;
     left: 15px;
 
+    cursor: pointer;
     opacity: 0.8;
     transition: all .3s ease-out;
 }
 
-#show-data .close:hover {
+#show-data #close:hover {
     opacity: 1 !important;
     --qcolor: #eb2a2a;
     box-shadow: 0 0 1px #c8c8c857;
